@@ -1,14 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-
-function SearchForm (props:any){
+import {useNavigate} from 'react-router-dom'
+function SearchForm (){
+        const navigate = useNavigate();
         const handleSubmit = (e:any)=>{
             e.preventDefault();
-            if(props.onSearch){
-                props.onSearch(e.target.search.value)
-            }else{console.error("Hubo un error")}
+            const query = e.target.query.value;
+            navigate("/search/"+query,{replace:true})
+            e.target.reset()
         }
     return <form className="search-form" onSubmit={handleSubmit}>
-        <input type="text" name="search" className="search-form__input" required />
+        <input type="text" name="query" className="search-form__input" required placeholder='Hace tu busqueda!'/>
         <button className="search-form__button">Buscar</button>
     </form>
 }

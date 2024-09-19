@@ -1,17 +1,16 @@
 import{Routes, Route} from 'react-router-dom'
-import { App } from '../pages/App'
-import { Page2 } from '../pages/Page2'
+import { Home } from '../pages/Home'
 import { Layout } from '../components/Layout'
-import { Search } from '../pages/Search'
-
+import { Item } from '../pages/Item'
+import {SearchResults} from '../pages/SearchResults'
 export default function AppRoutes(){
     return (
     <Routes>
             <Route path="/" element={<Layout/>} >
-                <Route index element={<App/>}/>
-                <Route path="page2" element={<Page2/>}/>
+                <Route index element={<Home/>}/>
+                <Route path="/search/:query" element={<SearchResults/>}/>
+                <Route path="/item/:id" element={<Item/>}/>
             </Route>
-            <Route path="/search/:busqueda" element={<Search/>}/>
     </Routes>
     )
 }

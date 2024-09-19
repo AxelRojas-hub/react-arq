@@ -1,11 +1,14 @@
-import {Outlet} from "react-router-dom"
+import {Outlet,Link} from "react-router-dom"
 import {SearchForm} from '../components/SearchForm'
 
 function Layout () {
     return (
     <div>
-        <SearchForm ></SearchForm>
-        <Outlet ></Outlet>
+        <Link to="/">🏠</Link>
+        <header>
+            <SearchForm />
+        </header>
+        <Outlet />
     </div>
     );
 }
