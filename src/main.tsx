@@ -5,13 +5,6 @@ import './index.css';
 import {AppRoutes} from './router';
 
 
-// const router = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <AppRoutes/>,
-//   },
-// ]);
-
 createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
         <BrowserRouter>

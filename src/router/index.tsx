@@ -1,7 +1,8 @@
 import{Routes, Route} from 'react-router-dom'
-import { App } from './App'
-import { Page2 } from './Page2'
-import { Layout } from './Layout'
+import { App } from '../pages/App'
+import { Page2 } from '../pages/Page2'
+import { Layout } from '../components/Layout'
+import { Search } from '../pages/Search'
 
 export default function AppRoutes(){
     return (
@@ -10,7 +11,7 @@ export default function AppRoutes(){
                 <Route index element={<App/>}/>
                 <Route path="page2" element={<Page2/>}/>
             </Route>
-            <Route path="pagAparte" element={<Page2/>}/>
+            <Route path="/search/:busqueda" element={<Search/>}/>
     </Routes>
     )
 }

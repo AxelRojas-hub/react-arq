@@ -1,12 +1,11 @@
 import {Outlet} from "react-router-dom"
-
+import {SearchForm} from '../components/SearchForm'
 
 function Layout () {
     return (
     <div>
-        <header>Header Layout</header>
+        <SearchForm ></SearchForm>
         <Outlet ></Outlet>
-        <footer>Footer Layout</footer>
     </div>
     );
 }
